@@ -1,0 +1,367 @@
+/* Default styles (desktop) */
+.events-section {
+
+  background-image: radial-gradient(ellipse at center,
+    rgba(255, 248, 220, 0.95) 0%,
+    rgba(255, 223, 85, 0.6) 40%,
+    rgba(255, 185, 15, 0.85) 75%,
+    rgba(204, 140, 0, 1) 100%
+  );
+  padding: 100px 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* No margin-top by default for desktop */
+}
+
+.events-section .container {
+ 
+  max-width: 1200px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.95);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(204, 140, 0, 0.2);
+  padding: 40px;
+  box-sizing: border-box;
+  width: 95%;
+}
+
+.events-title {
+  text-align: center;
+  color: #8B6508;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(255, 215, 0, 0.3);
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.events-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(to right, #FFC107, #FF9800);
+  border-radius: 2px;
+}
+
+.events-table-container {
+  width: 100%;
+  border-radius: 16px;
+}
+
+/* Desktop Table Styles */
+.buddha-events-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: transparent;
+  margin-bottom: 2rem;
+  font-size: 1.08rem;
+  table-layout: fixed;
+  word-break: break-word;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.buddha-events-table th, 
+.buddha-events-table td {
+  padding: 20px;
+  text-align: left;
+  overflow-wrap: break-word;
+  vertical-align: middle;
+}
+
+.buddha-events-table th {
+  background: linear-gradient(to bottom, #FFC107, #FFA000);
+  color: #5D4037;
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  border-bottom: 2px solid #FF8F00;
+}
+
+.buddha-events-table tr {
+  transition: all 0.3s ease;
+}
+
+.buddha-events-table tr:nth-child(even) {
+  background: rgba(255, 253, 231, 0.8);
+}
+
+.buddha-events-table tr:nth-child(odd) {
+  background: rgba(255, 248, 225, 0.8);
+}
+
+.buddha-events-table tr:hover {
+  background: rgba(255, 243, 205, 0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(204, 140, 0, 0.1);
+}
+
+.events-image-cell {
+  width: 180px;
+  padding: 15px !important;
+}
+
+.pagoda-image-frame {
+  border: 8px solid transparent;
+  border-image: linear-gradient(45deg, #FFC107, #FF9800, #FF5722) 1;
+  border-radius: 8px;
+  padding: 0;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  height: 120px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.pagoda-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.buddha-events-table tr:hover .pagoda-image-frame img {
+  transform: scale(1.05);
+}
+
+.events-details-cell {
+  padding-right: 30px !important;
+}
+
+.event-title {
+  color: #6D4C41;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.event-summary {
+  color: #5D4037;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.events-time-cell {
+  width: 180px;
+}
+
+.date, .time {
+  display: block;
+  color: #5D4037;
+}
+
+.date {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.time {
+  font-size: 0.9rem;
+  color: #8D6E63;
+}
+
+.see-more-btn {
+   background-color: #facc15; /* Buddha yellow */
+  color: #92400e; /* Buddha dark brown for text */
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.see-more-btn svg {
+  stroke: #fde68a; /* Light gold icon */
+  transition: transform 0.3s ease;
+}
+
+.see-more-btn:hover {
+   background-color: #92400e; /* Rich amber background */
+  color: #fde68a; /* Light gold text */
+
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.see-more-btn:hover svg {
+  stroke: #92400e; /* Change icon color on hover */
+  transform: translateX(4px);
+}
+
+@media (max-width: 576px) {
+  .see-more-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+
+/* Mobile Card Styles */
+.mobile-view {
+  display: none;
+}
+
+.event-card {
+  background: rgba(255, 253, 231, 0.9);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.card-image {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.card-image .pagoda-image-frame {
+  height: 100%;
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+  border-bottom: none;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content .event-title {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.event-meta {
+  margin-bottom: 12px;
+}
+
+.date-time {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 8px;
+}
+
+.date-time .date {
+  font-weight: 500;
+  color: #5D4037;
+}
+
+.date-time .time {
+  color: #8D6E63;
+  font-size: 0.9rem;
+}
+
+.card-content .see-more-btn {
+  width: 100%;
+  justify-content: center;
+  margin-top: 15px;
+  padding: 12px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .events-section .container {
+    padding: 30px;
+    width: 98%;
+  }
+  
+  .buddha-events-table th, 
+  .buddha-events-table td {
+    padding: 15px;
+  }
+  
+  .events-image-cell {
+    width: 150px;
+  }
+  
+  .pagoda-image-frame {
+    height: 100px;
+  }
+  
+  .events-time-cell {
+    width: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-view {
+    display: none;
+  }
+  
+  .mobile-view {
+    display: block;
+  }
+  
+  .events-section {
+    padding: 40px 0;
+  }
+  
+  .events-section .container {
+    padding: 25px 20px;
+    border-radius: 16px;
+  }
+  
+  .events-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .events-section {
+    padding-top: 130px;
+  }
+  
+  .events-title {
+    font-size: 1.8rem;
+  }
+  
+  .card-image {
+    height: 160px;
+  }
+  
+  .card-content {
+    padding: 15px;
+  }
+  
+  .card-content .event-title {
+    font-size: 1.2rem;
+  }
+  
+  .date-time {
+    flex-direction: column;
+    gap: 5px;
+  }
+}

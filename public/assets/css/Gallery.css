@@ -1,0 +1,187 @@
+/* src/components/PagodaGallery.css */
+.pagoda-gallery {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 248, 220, 0.95) 0%,
+    rgba(255, 223, 85, 0.6) 40%,
+    rgba(255, 185, 15, 0.85) 75%,
+    rgba(204, 140, 0, 1) 100%
+  );
+  padding: 3rem 1rem;
+}
+
+.text-gradient {
+  background: rgba(44, 26, 12, 0.85);  
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.nav-pills .nav-link {
+  color: #333;
+  font-weight: 500;
+  margin: 0 5px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-pills .nav-link.active {
+  background: rgba(44, 26, 12, 0.85); 
+  color: #facc15 !important;
+  box-shadow: 0 0 10px rgba(250, 204, 21, 0.4);
+  text-shadow: 0 0 4px rgba(250, 204, 21, 0.6);
+}
+
+.gallery-item {
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+}
+
+.hover-effect {
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.hover-effect:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.card-img-top {
+  height: 220px;
+  object-fit: cover;
+  width: 100%;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.hover-effect:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+/* Improved Card Body Styling */
+.card-body {
+  padding: 1.5rem;
+background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(245, 240, 220, 0.95) 50%, rgba(240, 226, 200, 0.9) 100%);
+  color: #fff8e1;
+  transition: all 0.3s ease;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+.card-body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(245, 240, 220, 0.95) 50%, rgba(240, 226, 200, 0.9) 100%);
+  z-index: -1;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.hover-effect:hover .card-body::before {
+  opacity: 0.8;
+}
+
+/* Card Title */
+.card-body .card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #facc15;
+  margin-bottom: 0.75rem;
+  position: relative;
+  display: inline-block;
+}
+
+.card-body .card-title::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #facc15;
+  transition: width 0.3s ease;
+}
+
+.hover-effect:hover .card-body .card-title::after {
+  width: 100%;
+}
+
+/* Category Badge */
+.card-body .badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.4em 0.75em;
+  border-radius: 50rem;
+  background: linear-gradient(to right, #d4a017, #facc15);
+  color: #3e2723;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  align-self: flex-start;
+  margin-bottom: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.hover-effect:hover .card-body .badge {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Description */
+.card-body .card-text {
+  font-size: 0.95rem;
+  color: #fff8e1;
+  line-height: 1.6;
+  margin-bottom: 0;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.hover-effect:hover .card-body .card-text {
+  opacity: 1;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  /* .gallery-grid .col-6 {
+    width: 50%;
+  } */
+  
+  .card-body {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 576px) {
+  /* .gallery-grid .col-6 {
+    width: 100%;
+  } */
+  
+  .card-body {
+    padding: 1rem;
+  }
+  
+  .card-body .card-title {
+    font-size: 1.1rem;
+  }
+  
+  .card-body .card-text {
+    font-size: 0.9rem;
+  }
+  
+  .card-body .badge {
+    font-size: 0.7rem;
+  }
+}
